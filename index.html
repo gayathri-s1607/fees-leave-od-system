@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Welcome to Student Portal</h1>
+<img src="https://via.placeholder.com/300">
+
+<h2>Login</h2>
+
+<input type="text" id="roll" placeholder="Roll No"><br>
+<input type="date" id="dob"><br>
+<button onclick="login()">Login</button>
+
+<script>
+function login(){
+    let roll = document.getElementById("roll").value;
+    let dob = document.getElementById("dob").value;
+
+    if(roll !== "" && dob !== ""){
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Enter details");
+    }
+}
+</script>
+
+</body>
+</html>
