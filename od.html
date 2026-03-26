@@ -1,0 +1,31 @@
+<label>Parent Permission:</label><br>
+<select id="parent">
+    <option>Accept</option>
+    <option>Deny</option>
+</select><br><br>
+
+<label>Staff Permission:</label><br>
+<select id="staff">
+    <option>Accept</option>
+    <option>Deny</option>
+</select><br><br>
+
+<button onclick="submitForm()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function submitForm(){
+    let parent = document.getElementById("parent").value;
+    let staff = document.getElementById("staff").value;
+
+    if(parent === "Deny" || staff === "Deny"){
+        document.getElementById("result").innerHTML =
+        "❌ OD is NOT accepted";
+    } 
+    else {
+        document.getElementById("result").innerHTML =
+        "✅ OD is accepted";
+    }
+}
+</script>
